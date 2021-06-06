@@ -3,7 +3,7 @@
 
 # Dataset Column's Information
 
-<img src="https://www.researchgate.net/publication/327029519/figure/tbl1/AS:667628372766726@1536186416689/List-of-the-40-face-attributes-provided-with-the-CelebA-database.png">
+<img src="https://miro.medium.com/max/3846/1*_STk17DQhsLACP3P69IzEw.png">
 
 # Context
 
