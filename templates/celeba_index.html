@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>CELEBA UPDATE API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<img src="https://miro.medium.com/max/2000/1*_UCG4Pgw5hXIuzJI58IOkQ.png">
+
+</head>
+
+<body background = "https://png.pngtree.com/thumb_back/fh260/back_our/20190628/ourmid/pngtree-leather-texture-background-picture-image_265098.jpg">
+ <div class="login">
+	<h1>Predict The Value Of "Smilling" Of Celeba Faces Attributes [CelebA] Dataset</h1>
+    <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="lefteye_x" placeholder="Lefteye_X" required="required" />
+        <input type="text" name="lefteye_y" placeholder="Lefteye_Y" required="required" />
+        <input type="text" name="righteye_x" placeholder="Righteye_X" required="required" />
+        <input type="text" name="righteye_y" placeholder="Righteye_Y" required="required" />
+        <input type="text" name="nose_x" placeholder="Nose_X" required="required" />
+		<input type="text" name="nose_y" placeholder="Nose_Y" required="required" />
+        <input type="text" name="leftmouth_x" placeholder="Leftmouth_X" required="required" />
+        <input type="text" name="leftmouth_y" placeholder="Leftmouth_Y" required="required" />
+		<input type="text" name="rightmouth_x" placeholder="Rightmouth_X" required="required" />
+        <input type="text" name="rightmouth_y" placeholder="Rightmouth_Y" required="required" />
+        <input type="text" name="partition" placeholder="Partition" required="required" />
+		<input type="text" name="x_1" placeholder="X_1" required="required" />
+        <input type="text" name="y_1" placeholder="Y_1" required="required" />
+        <input type="text" name="width" placeholder="Width" required="required" />
+		<input type="text" name="height" placeholder="Height" required="required" />
+        <input type="text" name="5_o_Clock_Shadow" placeholder="5_o_Clock_Shadow" required="required" />
+        <input type="text" name="Arched_Eyebrows" placeholder="Arched_Eyebrows" required="required" />
+		<input type="text" name="Attractive " placeholder="Attractive" required="required" />
+        <input type="text" name="Bags_Under_Eyes" placeholder="Bags_Under_Eyes" required="required" />
+        <input type="text" name="Bald " placeholder="Bald" required="required" />
+		<input type="text" name="Bangs" placeholder="Bangs" required="required" />
+        <input type="text" name="Big_Lips" placeholder="Big_Lips" required="required" />
+        <input type="text" name="Big_Nose" placeholder="Big_Nose" required="required" />
+		<input type="text" name="Black_Hair" placeholder="Black_Hair" required="required" />
+        <input type="text" name="Blond_Hair" placeholder="Blond_Hair" required="required" />
+        <input type="text" name="Blurry" placeholder="Blurry" required="required" />
+		<input type="text" name="Brown_Hair" placeholder="Brown_Hair" required="required" />
+        <input type="text" name="Bushy_Eyebrows" placeholder="Bushy_Eyebrows" required="required" />
+        <input type="text" name="Chubby" placeholder="Chubby" required="required" />
+		<input type="text" name="Double_Chin" placeholder="Double_Chin" required="required" />
+        <input type="text" name="Eyeglasses" placeholder="Eyeglasses" required="required" />
+        <input type="text" name="Goatee" placeholder="Goatee" required="required" />
+		<input type="text" name="Gray_Hair" placeholder="Gray_Hair" required="required" />
+        <input type="text" name="Heavy_Makeup " placeholder="Heavy_Makeup" required="required" />
+        <input type="text" name="High_Cheekbones" placeholder="High_Cheekbones" required="required" />
+		<input type="text" name="Male" placeholder="Male" required="required" />
+        <input type="text" name="Mouth_Slightly_Open" placeholder="Mouth_Slightly_Open" required="required" />
+        <input type="text" name="Mustache" placeholder="Mustache" required="required" />
+		<input type="text" name="Narrow_Eyes " placeholder="Narrow_Eyes" required="required" />
+        <input type="text" name="No_Beard" placeholder="No_Beard" required="required" />
+        <input type="text" name="Oval_Face" placeholder="Oval_Face" required="required" />
+		<input type="text" name="Pointy_Nose" placeholder="Pointy_Nose" required="required" />
+        <input type="text" name="Receding_Hairline" placeholder="Receding_Hairline" required="required" />
+        <input type="text" name="Rosy_Cheeks " placeholder="Rosy_Cheeks" required="required" />
+		<input type="text" name="Sideburns" placeholder="Sideburns" required="required" />
+        <input type="text" name="Straight_Hair" placeholder="Straight_Hair" required="required" />
+        <input type="text" name="Wavy_Hair" placeholder="Wavy_Hair" required="required" />
+		<input type="text" name="Wearing_Earrings" placeholder="Wearing_Earrings" required="required" />
+        <input type="text" name="Wearing_Hat" placeholder="Wearing_Hat" required="required" />
+        <input type="text" name="Wearing_Lipstick" placeholder="Wearing_Lipstick" required="required" />
+		<input type="text" name="Wearing_Necklace" placeholder="Wearing_Necklace" required="required" />
+        <input type="text" name="Wearing_Necktie  " placeholder="Wearing_Necktie" required="required" />
+        <input type="text" name="Young" placeholder="Young" required="required" />
+        <input type="text" name="Pale_Skin" placeholder="Pale_Skin" required="required" />
+        
+
+
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict Value Of Smilling </button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
