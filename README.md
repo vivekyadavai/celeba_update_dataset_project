@@ -1,4 +1,4 @@
-# Celeb_Update_Project
+# Celeba_Update_Project
 <img src="https://99thingstodobeforeidie.com/wp-content/uploads/2020/09/Update-Loading.jpg">
 
 # Dataset Column's Information
