@@ -1,1 +1,1 @@
-web: gunicorn celeba_flask:app
+web: gunicorn celeba_update:app
